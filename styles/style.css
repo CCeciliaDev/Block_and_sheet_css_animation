@@ -1,0 +1,161 @@
+/******* GENERAL *******/
+body {
+    background-color: #8facad;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 0.8em;
+    line-height: 1.5;
+}
+
+/******* HEADER *******/
+
+.bandeau {
+    align-items: center;
+    background-color: #7c9495;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    color: #f8f8f8;
+    text-shadow: 1px 1px 2px black;
+    padding: 20px 0px;
+}
+
+h1 {
+    font-family: 'Prosto One', sans-serif;
+    text-align: center;
+    font-size: 2.3em;
+    margin: 0PX;
+}
+
+.textBandeau {
+    font-size: 1.2em;
+    margin: 0px;
+}
+
+
+/******* INDEX *******/
+
+.messageAccueil {
+    display: block;
+    margin: 50px auto;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    width: 80%;
+    max-width: 640px;
+    height: 60px;
+}
+
+.messageAccueil > div {
+    display: inline-block; 
+    white-space: nowrap;
+    animation: defilement-rtl 15s infinite linear;
+    padding: 10px 2em 10px 100%;
+  }
+  /* .messageAccueil:hover > div {
+    animation-play-state: paused; 
+    /* met en pause le défilement  */
+
+  @keyframes defilement-rtl {
+    0% {
+      -webkit-transform: translate(0);
+      transform: translate(0);
+    }
+    100% {
+      -webkit-transform: translate(-100%);
+      transform: translate(-100%);
+    }
+  }
+
+.boxAccueil {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
+
+a.box {
+    text-decoration: none;
+    color: black;
+}
+
+.boxNav {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    border: 2px solid black;
+    background-color: #c1d9da;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 5px rgb(29, 92, 137);;
+    transition: all 0.5s ease;
+    position: relative;
+    z-index: 2;
+    border-radius: 15px;
+}
+
+.imgLeaf {
+    position: relative;
+    z-index: 1;
+    top: -165px;
+    transition: all 0.5s ease;
+}
+
+.boxNav:hover {
+    transform: rotate(-10deg);
+    background-color: #7c9495;
+    color: #f8f8f8;
+}
+
+.boxNav:hover ~ .imgLeaf {
+    animation-duration: 0.8s;
+    animation-name: slidein;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slidein {
+  from {
+    margin-left:0%;
+  }
+
+  to {
+    margin-left:30%;
+  }
+}
+
+/******* FOOTER *******/
+.boxFooter {
+    text-align: center; 
+    font-size: 10px;
+    color: #305c65;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: inline-block;
+    margin: 5px;
+}
+
+/******* RESPONSIVE *******/
+@media screen and (max-width: 600px) {
+    h1 {
+        text-align: center;
+        font-size: 1.3em;
+    }
+    a.box {
+        height: 200px;
+    }
+    .boxAccueil {
+        align-items: center;
+        flex-direction: column;
+    }
+}
